@@ -1,0 +1,1426 @@
+[
+    {
+        "Code": "COMP2017",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1113",
+                "INFO1105",
+                "INFO1905",
+                "INFO1103"
+            ]
+        ],
+        "Prohibits": [
+            "COMP2129",
+            "COMP9017",
+            "COMP9129"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Systems Programming"
+    },
+    {
+        "Code": "COMP2022",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1103",
+                "INFO1903",
+                "INFO1113"
+            ]
+        ],
+        "Prohibits": [
+            "COMP2922"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Models of Computation"
+    },
+    {
+        "Code": "COMP2123",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1110",
+                "INFO1910",
+                "INFO1113",
+                "DATA1002",
+                "DATA1902",
+                "ENGG1810",
+                "INFO1103",
+                "INFO1903"
+            ]
+        ],
+        "Prohibits": [
+            "INFO1105",
+            "INFO1905",
+            "COMP2823"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Data Structures and Algorithms"
+    },
+    {
+        "Code": "COMP3027",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2123",
+                "COMP2823",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [
+            "COMP2007",
+            "COMP2907",
+            "COMP3927"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Algorithm Design"
+    },
+    {
+        "Code": "COMP3308",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "INFO1110",
+                "INFO1910",
+                "ENGG1810",
+                "DATA1002"
+            ]
+        ],
+        "Prohibits": [
+            "COMP3608"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Introduction to Artificial Intelligence"
+    },
+    {
+        "Code": "COMP3419",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2123",
+                "COMP2823",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Graphics and Multimedia"
+    },
+    {
+        "Code": "COMP3520",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2017",
+                "COMP2129"
+            ],
+            [
+                "COMP2123",
+                "COMP2823",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Operating Systems Internals"
+    },
+    {
+        "Code": "COMP3530",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2123",
+                "COMP2823",
+                "COMP2007",
+                "COMP2907"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Discrete Optimization"
+    },
+    {
+        "Code": "COMP3888",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2123",
+                "COMP2823"
+            ],
+            [
+                "COMP2017"
+            ],
+            [
+                "COMP2022",
+                "COMP2922"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3600",
+            "COMP3600",
+            "COMP3615",
+            "COMP3988"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Computer Science Project"
+    },
+    {
+        "Code": "COMP4318",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5318",
+            "OCMP5318"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Machine Learning and Data Mining"
+    },
+    {
+        "Code": "COMP4328",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5328",
+            "OCMP5328"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Advanced Machine Learning"
+    },
+    {
+        "Code": "COMP4329",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [
+            [
+                "COMP3308",
+                "COMP3608",
+                "COMP4318",
+                "BMET2925"
+            ]
+        ],
+        "Prohibits": [
+            "COMP5329",
+            "OCMP5329"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Deep Learning"
+    },
+    {
+        "Code": "COMP4338",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [
+            [
+                "INFO2120",
+                "INFO2820",
+                "ISYS2120"
+            ]
+        ],
+        "Prohibits": [
+            "COMP5338",
+            "OCMP5338"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Advanced Data Models"
+    },
+    {
+        "Code": "COMP4424",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5424"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Information Technology in Biomedicine"
+    },
+    {
+        "Code": "COMP4445",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5045"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computational Geometry"
+    },
+    {
+        "Code": "COMP4446",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5046"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Natural Language Processing"
+    },
+    {
+        "Code": "COMP5045",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4445"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computational Geometry"
+    },
+    {
+        "Code": "COMP5046",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4446"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Natural Language Processing"
+    },
+    {
+        "Code": "COMP5206",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Information Technologies and Systems"
+    },
+    {
+        "Code": "COMP5310",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO3406",
+            "OCMP5310"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Principles of Data Science"
+    },
+    {
+        "Code": "COMP5318",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4318",
+            "OCMP5318"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Machine Learning and Data Mining"
+    },
+    {
+        "Code": "COMP5328",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4328",
+            "OCMP5328"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Advanced Machine Learning"
+    },
+    {
+        "Code": "COMP5329",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4329",
+            "OCMP5329"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Deep Learning"
+    },
+    {
+        "Code": "COMP5338",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4338",
+            "OCMP5338"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Advanced Data Models"
+    },
+    {
+        "Code": "COMP5339",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [
+            [
+                "COMP5310"
+            ]
+        ],
+        "Prohibits": [
+            "OCMP5339"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Data Engineering"
+    },
+    {
+        "Code": "COMP5424",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP4424"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Information Technology in Biomedicine"
+    },
+    {
+        "Code": "COMP5615",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP3615",
+            "INFO3600",
+            "SOFT3413",
+            "COMP3600",
+            "COMP3888",
+            "COMP3988",
+            "SOFT3888"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Software Engineering Project"
+    },
+    {
+        "Code": "COMP8328",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5328",
+            "COMP4328"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Advanced Machine Learning"
+    },
+    {
+        "Code": "COMP8617",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5617",
+            "COMP4617"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Empirical Security Analysis and Engineering"
+    },
+    {
+        "Code": "COMP9001",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1110",
+            "INFO1910",
+            "INFO1103",
+            "INFO1903",
+            "INFO1105",
+            "INFO1905",
+            "ENGG1810"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Introduction to Programming"
+    },
+    {
+        "Code": "COMP9003",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1113",
+            "INFO1103",
+            "COMP9103"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Object-Oriented Programming"
+    },
+    {
+        "Code": "COMP9017",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP2129",
+            "COMP2017",
+            "COMP9129"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Systems Programming"
+    },
+    {
+        "Code": "COMP9110",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "ELEC3610",
+            "ELEC5743",
+            "INFO2110",
+            "INFO5001",
+            "ISYS2110"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "System Analysis and Modelling"
+    },
+    {
+        "Code": "COMP9120",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO2120",
+            "INFO2820",
+            "INFO2005",
+            "INFO2905",
+            "COMP5138",
+            "ISYS2120"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Database Management Systems"
+    },
+    {
+        "Code": "COMP9121",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5116"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Design of Networks and Distributed Systems"
+    },
+    {
+        "Code": "COMP9123",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1105",
+            "INFO1905",
+            "COMP2123",
+            "COMP2823"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Data Structures and Algorithms"
+    },
+    {
+        "Code": "COMP9201",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO3220",
+            "SOFT2201"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Software Construction and Design 1"
+    },
+    {
+        "Code": "COMP9202",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "SOFT3202"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Software Construction and Design 2"
+    },
+    {
+        "Code": "COMP9412",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "SOFT2412"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Agile Software Development Practices"
+    },
+    {
+        "Code": "COMP9601",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "COMP5213"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computer and Network Organisation"
+    },
+    {
+        "Code": "CSEC3616",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "INFO1110",
+                "INFO1910"
+            ],
+            [
+                "INFO1112"
+            ],
+            [
+                "INFO1113"
+            ],
+            [
+                "MATH1064"
+            ]
+        ],
+        "Prohibits": [
+            "ELEC5616",
+            "INFO2315",
+            "INFO3616"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Cybersecurity Engineering"
+    },
+    {
+        "Code": "CSEC3888",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "COMP2017",
+                "COMP2907"
+            ],
+            [
+                "ISYS2120"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3600"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Cybersecurity Project"
+    },
+    {
+        "Code": "CSEC5614",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "OCSE5614"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Data Privacy: Theory and Practice"
+    },
+    {
+        "Code": "CSEC5616",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "ELEC5616",
+            "OCSE5616"
+        ],
+        "Session": [
+            "Semester 2",
+            "Semester 1"
+        ],
+        "Title": "Cybersecurity Engineering"
+    },
+    {
+        "Code": "CSEC5619",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "OCSE5619"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Applied Cryptography"
+    },
+    {
+        "Code": "DATA1002",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1903",
+            "DATA1902"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Informatics: Data and Computation"
+    },
+    {
+        "Code": "DATA1902",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1903",
+            "DATA1002"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Informatics: Data and Computation (Advanced)"
+    },
+    {
+        "Code": "DATA2001",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "DATA1002",
+                "DATA1902",
+                "INFO1110",
+                "INFO1910",
+                "INFO1903",
+                "INFO1103",
+                "ENGG1810"
+            ]
+        ],
+        "Prohibits": [
+            "DATA2901"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Data Science, Big Data and Data Variety"
+    },
+    {
+        "Code": "DATA3404",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "DATA2001",
+                "DATA2901",
+                "ISYS2120",
+                "INFO2120",
+                "INFO2820"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3504",
+            "INFO3404"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Scalable Data Management"
+    },
+    {
+        "Code": "DATA3406",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "DATA2001",
+                "DATA2901"
+            ],
+            [
+                "DATA2002",
+                "DATA2902"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Human-in-the-Loop Data Analytics"
+    },
+    {
+        "Code": "DATA4207",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "DATA5207"
+        ],
+        "Session": [
+            "Semester 1",
+            "Intensive December"
+        ],
+        "Title": "Data Analysis in the Social Sciences"
+    },
+    {
+        "Code": "DATA5207",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "DATA4207"
+        ],
+        "Session": [
+            "Semester 1",
+            "Intensive December"
+        ],
+        "Title": "Data Analysis in the Social Sciences"
+    },
+    {
+        "Code": "ELEC3612",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "MATH1002",
+                "MATH1005"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Pattern Recognition and Machine Intelligence"
+    },
+    {
+        "Code": "INFO1110",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1910",
+            "INFO1103",
+            "INFO1903",
+            "INFO1105",
+            "INFO1905",
+            "ENGG1810"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Introduction to Programming"
+    },
+    {
+        "Code": "INFO1111",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "ENGG1805",
+            "ENGG1111",
+            "ENGD1000"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computing 1A Professionalism"
+    },
+    {
+        "Code": "INFO1112",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Computing 1B OS and Network Platforms"
+    },
+    {
+        "Code": "INFO1113",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [
+            [
+                "INFO1110",
+                "INFO1910",
+                "ENGG1810"
+            ]
+        ],
+        "Prohibits": [
+            "INFO1103",
+            "INFO1105",
+            "INFO1905"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Object-Oriented Programming"
+    },
+    {
+        "Code": "INFO1910",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1110",
+            "INFO1103",
+            "INFO1903",
+            "INFO1105",
+            "INFO1905",
+            "ENGG1810"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Introduction to Programming (Advanced)"
+    },
+    {
+        "Code": "INFO1911",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1",
+            "Intensive July"
+        ],
+        "Title": "IT Special Project 1A"
+    },
+    {
+        "Code": "INFO1912",
+        "Credit": 6,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [],
+        "Session": [
+            "Intensive July",
+            "Semester 2"
+        ],
+        "Title": "IT Special Project 1B"
+    },
+    {
+        "Code": "INFO2222",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1103",
+                "INFO1105",
+                "INFO1905",
+                "INFO1113"
+            ],
+            [
+                "INFO1111",
+                "INFO1711",
+                "ENGG1111",
+                "ENGD1000",
+                "ENGG1805"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computing 2 Usability and Security"
+    },
+    {
+        "Code": "INFO3600",
+        "Credit": 12,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "INFO3402",
+                "INFO3333"
+            ]
+        ],
+        "Prohibits": [
+            "COMP3615",
+            "ISYS3400",
+            "COMP3888",
+            "ISYS3888"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Major Development Project (Advanced)"
+    },
+    {
+        "Code": "INFO4406",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO5306"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Enterprise Healthcare Information Systems"
+    },
+    {
+        "Code": "INFO4444",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [
+            [
+                "INFO3333"
+            ]
+        ],
+        "Prohibits": [
+            "INFO4990"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Computing 4 Innovation"
+    },
+    {
+        "Code": "INFO4491",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [
+            [
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [
+            "INFO5991"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Services Science Management and Engineering"
+    },
+    {
+        "Code": "INFO4990",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO4444",
+            "INFO5993"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Computer Science Research Methods"
+    },
+    {
+        "Code": "INFO5301",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "OINF5301"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Information Security Management"
+    },
+    {
+        "Code": "INFO5306",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO4406"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Enterprise Healthcare Information Systems"
+    },
+    {
+        "Code": "INFO5990",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "OINF5990"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Professional Practice in IT"
+    },
+    {
+        "Code": "INFO5991",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO4491"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Services Science Management and Engineering"
+    },
+    {
+        "Code": "INFO5993",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO4990"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Computer Science Research Methods"
+    },
+    {
+        "Code": "INFO6007",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "PMGT5871"
+        ],
+        "Session": [
+            "Semester 1",
+            "Semester 2"
+        ],
+        "Title": "Project Management in IT"
+    },
+    {
+        "Code": "INFO6012",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [
+            [
+                "COMP5206",
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Information Technology Strategy and Value"
+    },
+    {
+        "Code": "ISYS2110",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1113",
+                "INFO1103",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [
+            "INFO2110"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Analysis and Design of Web Info Systems"
+    },
+    {
+        "Code": "ISYS2120",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1113",
+                "INFO1103",
+                "INFO1105",
+                "INFO1905",
+                "INFO1003",
+                "INFO1903",
+                "DECO1012"
+            ]
+        ],
+        "Prohibits": [
+            "INFO2120",
+            "INFO2820",
+            "COMP5138"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Data and Information Management"
+    },
+    {
+        "Code": "ISYS2160",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [],
+        "Prohibits": [
+            "ISYS2140"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Information Systems in the Internet Age"
+    },
+    {
+        "Code": "ISYS3401",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "INFO2110",
+                "ISYS2110"
+            ],
+            [
+                "INFO2120",
+                "ISYS2120"
+            ],
+            [
+                "ISYS2140",
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Information Technology Evaluation"
+    },
+    {
+        "Code": "ISYS3888",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "INFO2110",
+                "ISYS2110"
+            ],
+            [
+                "INFO2120",
+                "ISYS2120"
+            ],
+            [
+                "ISYS2140",
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3600",
+            "ISYS3207",
+            "ISYS3400"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Information Systems Project"
+    },
+    {
+        "Code": "ISYS4450",
+        "Credit": 6,
+        "Level": "honours",
+        "Prerequisites": [
+            [
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [
+            "ISYS5050"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Knowledge Management Systems"
+    },
+    {
+        "Code": "ISYS5050",
+        "Credit": 6,
+        "Level": "postgraduate",
+        "Prerequisites": [
+            [
+                "COMP5206",
+                "ISYS2160"
+            ]
+        ],
+        "Prohibits": [
+            "ISYS4450"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Knowledge Management Systems"
+    },
+    {
+        "Code": "OLET1305",
+        "Credit": 2,
+        "Level": "junior",
+        "Prerequisites": [],
+        "Prohibits": [
+            "INFO1103",
+            "INFO1110",
+            "INFO1910",
+            "INFO1903"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Coding Literacy"
+    },
+    {
+        "Code": "SOFT2201",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1113",
+                "INFO1103",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3220",
+            "COMP9201"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Software Construction and Design 1"
+    },
+    {
+        "Code": "SOFT2412",
+        "Credit": 6,
+        "Level": "intermediate",
+        "Prerequisites": [
+            [
+                "INFO1113",
+                "INFO1103",
+                "INFO1105",
+                "INFO1905"
+            ]
+        ],
+        "Prohibits": [
+            "COMP9412"
+        ],
+        "Session": [
+            "Semester 2"
+        ],
+        "Title": "Agile Software Development Practices"
+    },
+    {
+        "Code": "SOFT3202",
+        "Credit": 6,
+        "Level": "senior",
+        "Prerequisites": [
+            [
+                "SOFT2201"
+            ]
+        ],
+        "Prohibits": [
+            "INFO3220"
+        ],
+        "Session": [
+            "Semester 1"
+        ],
+        "Title": "Software Construction and Design 2"
+    }
+]

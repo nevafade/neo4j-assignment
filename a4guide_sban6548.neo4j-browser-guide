@@ -1,0 +1,256 @@
+<article class="guide" >
+  <carousel class="deck container-fluid">
+
+
+
+
+  <!--load-dataset-->
+  <slide class="row-fluid">
+    <div class="col-sm-6">
+      <h3>Graph Creation</h3>
+      <p>
+      (:UNIT) -> Represents units offered in 2023, units mentioned as prerequisite and prohibitions
+      </p><p>
+      (:CODESET) -> [Represents a collection of units]
+      </p><p>
+      (:STUDENT) -> [Represents a student currently enrolled]
+      </p><p>
+      [:ATTEMPT] -> Represents the relationship of student enrolling into a unit
+      </p><p>
+      [:PROHIBITION] -> Indicates that unit in end node is probited for the unit is start node
+      </p><p>
+      [:CONTAINS] -> indicates that unit end node is an element of teh code set in start node
+      </p><p>
+      [:REQUIREMENT] -> Indicates that one of the elements in the codeset of the end node needs to be completed to fulfill prerequisite condition of the unit in start node
+
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <figure>
+        <pre class="pre-scrollable code runnable">
+          CREATE CONSTRAINT unit_code_unique FOR (node:UNIT) REQUIRE node.Code IS UNIQUE;
+         CREATE CONSTRAINT student_id_unique FOR (node:STUDENT) REQUIRE node.StudentID IS UNIQUE;
+          CALL apoc.load.json("file:///units.json")
+          YIELD value
+          MERGE (p:UNIT {Code: value.Code})
+          SET p.Title = value.Title
+          SET p.Credit = value.Credit
+          SET p.Level = value.Level
+          SET p.Session = value.Session
+          SET p.Prohibits = value.Prohibits
+          SET p.Prerequisites = CASE WHEN size(value.Prerequisites) = 0 THEN value.Prerequisites WHEN size(value.Prerequisites) = 1 THEN value.Prerequisites[0] ELSE 'codeset' END
+          WITH p, value.Prerequisites as prerequisites
+          UNWIND prerequisites as prereqArray
+          WITH p,prereqArray, prerequisites, apoc.text.join(prereqArray, ',') as prerequisitesString
+          MERGE (p)-[:REQUIREMENT]->(cs:CODESET {units: prerequisitesString } )
+          WITH p,prereqArray,prerequisites,prerequisitesString
+          unwind prereqArray as preCode
+          MERGE (pu:UNIT {Code: preCode});
+          Match (p:UNIT)
+          WITH p
+          UNWIND p.Prohibits as prohUnits
+          MERGE (prohUnitCode:UNIT {Code:prohUnits});
+          MATCH (cs:CODESET) 
+          with cs, split(cs.units,',') as uArray
+          unwind uArray as ua
+          MATCH (k:UNIT {Code: ua})
+          MERGE (cs)-[:CONTAINS]->(k);
+          MATCH (u:UNIT)
+          UNWIND u.Prohibits as prohUnitCode
+          MATCH (prohUnit:UNIT {Code: prohUnitCode })
+          MERGE (u)-[:PROHIBITION]->(prohUnit);
+          LOAD CSV WITH HEADERS FROM 'file:///students.csv' AS row
+          WITH row.Name AS name, row.UnitCode AS unitCode, row.UnitName AS unitName, row.Grade AS grade, row.CreditPointAttempted AS creditPointAttempted, row.CreditPointPassed AS creditPointPassed, row.StudentID AS studentID, row.Year AS year, row.Mark AS mark
+          MERGE (p:STUDENT {Name: name,StudentID: studentID})
+          with *
+          MATCH (u:UNIT {Code: unitCode})
+          MERGE (p)-[:ATTEMPT {Grade: grade,
+            CreditPointAttempted: toFloat(creditPointAttempted),
+            CreditPointPassed: toFloat(creditPointPassed), Mark:  toFloat(mark)}]->(u);
+        </pre>
+      </figure>
+      <!--<figure>
+        <pre class="pre-scrollable code runnable">
+          MATCH (n) RETURN n;
+        </pre>
+      </figure>-->
+    </div>
+  </slide>
+
+  <!--NW1----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>Workload 1</h3>
+    <p>query to find all chains of units where each chain contains units linked by exactly three prerequisite relationships. 
+    </p>
+    </div>
+    <div class="col-sm-9">
+      <figure>
+        <pre class="highlight pre-scrollable code runnable">
+          MATCH p=(s:UNIT)-[:REQUIREMENT|CONTAINS*1..6]->(e:UNIT) WHERE e.Credit > 0
+          WITH p, relationships(p) AS rels
+          WITH p, [rel IN rels WHERE type(rel) IN ['REQUIREMENT', 'CONTAINS']] AS requirementRels
+          WITH *, size(requirementRels) as s
+          WHERE s > 5
+          WITH p, requirementRels, size(requirementRels) AS numberOfRequirementsOrContains, nodes(p) as nodeSet
+          WITH p, requirementRels, numberOfRequirementsOrContains, nodeSet, [n IN nodeSet WHERE 'UNIT' IN labels(n)] AS uNodes
+          return [node in uNodes | node.Code] as unitCodes
+        </pre>
+      </figure>
+      <figcaption>Update existing graph with persons.json data </figcaption>
+    </div>
+  </slide>
+
+  <!--NW2----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>Workload 2</h3>
+      <p>Query to find if the student meets the prohibition requirements to enrol in the given unit.  </p>
+    </div>
+
+    <div class="col-sm-9">
+      <label>Unit: </label>
+      <input value-for="p1" id="p1" class="form-control" value="DATA1902" size="25">
+      <br>
+      <label>Student name: </label>
+      <input value-for="p2"  id="p2" class="form-control" value="Alice" size="25">
+      <figure>
+        <pre class="pre-scrollable code runnable">
+          MATCH (u:UNIT {Code: '<span value-key="p1">DATA1902</span>'})-[:PROHIBITION]->(p:UNIT)
+          OPTIONAL MATCH (p)<-[:ATTEMPT]-(s:STUDENT {Name: '<span value-key="p2">Alice</span>'})
+          WITH p.Code as unitCode, s
+          WITH unitCode, CASE WHEN s IS NULL OR s.CreditPointPassed = 0 THEN false ELSE true END as Attempted
+          RETURN NOT(ANY(a in collect(Attempted) where a=true)) as staisfiescriteria
+		    </pre>
+      </figure>
+      <figcaption>Check Relationship try DATA1902</figcaption>
+      <!--<figure>
+        <pre class="pre-scrollable code runnable">
+          MATCH (u:UNIT {Code: '<span value-key="p1">DATA1902</span>'})-[:PROHIBITION]->(p:UNIT)
+          OPTIONAL MATCH (p)<-[:ATTEMPT]-(s:STUDENT {Name: '<span value-key="p2">Alice</span>'})
+          WITH p.Code as unitCode, s
+          RETURN unitCode, CASE WHEN s IS NULL OR s.CreditPointPassed = 0 THEN false ELSE true END as Attempted
+        </pre>
+      </figure>-->
+    </div>
+  </slide>
+
+    <!--NW3----->
+  <slide class="row-fluid">
+      <div class="col-sm-3">
+        <h3>Workload 3</h3>
+        <p>query to find if the student meets the prerequisites requirements to enrol in the given unit</p>
+      </div>
+
+      <div class="col-sm-9">
+        <label>Unit: </label>
+          <input value-for="p1" id="p1" class="form-control" value="COMP3888" size="25">
+          <br>
+          <label>Student name: </label>
+          <input value-for="p2"  id="p2" class="form-control" value="Alice" size="25">
+          <figure>
+          <pre class="pre-scrollable code runnable">
+            MATCH (u:UNIT {Code: '<span value-key="p1">COMP3888</span>'})-[r:REQUIREMENT]->(p:CODESET)-[c:CONTAINS]->(f:UNIT)
+            WITH p,f
+            OPTIONAL MATCH (f)<-[sa:ATTEMPT]-(st:STUDENT{Name:'<span value-key="p1">Alice</span>'}) where sa.CreditPointAttempted > 0
+            WITH p.units as unitset,f.Code as unitcode,sa is not NULL as attempted
+            with unitset,ANY(a in collect(attempted) where a=true) as req
+            return ALL(r in collect(req) where r=true ) as satisfiesRequirement
+          </pre>
+        </figure>
+        <figcaption>Check Relationship try COMP3888</figcaption>
+        <!--<figure>
+          <pre class="pre-scrollable code runnable">
+            MATCH (u:UNIT {Code: '<span value-key="p1">COMP3888</span>'})-[r:REQUIREMENT]->(p:CODESET)-[c:CONTAINS]->(f:UNIT)
+            WITH p,f
+            OPTIONAL MATCH (f)<-[sa:ATTEMPT]-(st:STUDENT{Name:'<span value-key="p1">Alice</span>'}) where sa.CreditPointAttempted > 0
+            RETURN p.units as unitset,f.Code as unitcode,sa is not NULL as attempted
+          </pre>
+        </figure>-->
+      </div>
+  </slide>
+
+  <!--DW1----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>Design Query 1</h3>
+      <p>Query to find average mark scored by each student
+      </p>
+    </div>
+
+    <div class="col-sm-9">
+      <figure>
+        <pre class="pre-scrollable code runnable" >
+          MATCH (s:STUDENT)-[a:ATTEMPT]->(kl:UNIT) 
+          RETURN s.Name,AVG(a.Mark);
+        </pre>
+      </figure>
+      <figcaption>Inspect person.json file</figcaption>
+    </div>
+  </slide> 
+
+  <!--DW2----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>Design Query 2</h3>
+      <p>Query to check if there are any honor level units that have 0 prerequisites
+      </p>
+    </div>
+
+    <div class="col-sm-9">
+      <figure>
+        <pre class="pre-scrollable code runnable" >
+          MATCH (u:UNIT{ Level: 'honours'})
+          WITH u
+          optional match (u)-[:REQUIREMENT]->(cs:CODESET)
+          with u.Level as lvl, u.Code as code, size(collect(cs)) as si
+          return ANY(c in COLLECT(si) where c=0)
+        </pre>
+      </figure>
+      <figcaption>Inspect person.json file</figcaption>
+    </div>
+  </slide>
+
+  <!--DW3----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>Design query 3</h3>
+      <p>Query pair of units that prohibit each other.
+      </p>
+    </div>
+
+    <div class="col-sm-9">
+      <figure>
+        <pre class="pre-scrollable code runnable" >
+          MATCH p=(u:UNIT)-[a:PROHIBITION*2]->(g:UNIT)
+          WHERE nodes(p)[0] = nodes(p)[-1]
+          RETURN p
+        </pre>
+      </figure>
+      <figcaption>Inspect person.json file</figcaption>
+    </div>
+  </slide> 
+
+    <!--delete-dataset----->
+  <slide class="row-fluid">
+    <div class="col-sm-3">
+      <h3>DELETE ALL</h3>
+      <p>Run following code delete all data
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <figure>
+        <pre class="pre-scrollable code runnable" >
+          MATCH (n) DETACH DELETE n;
+          DROP CONSTRAINT unit_code_unique ;
+          DROP CONSTRAINT student_id_unique ;
+        </pre>
+      </figure>
+      <figcaption>Inspect person.json file</figcaption>
+    </div>
+  </slide>
+
+
+
+</carousel>
+</article>

@@ -1,0 +1,30 @@
+﻿StudentID,Name,Year,UnitCode,UnitName,Grade,Mark,CreditPointAttempted,CreditPointPassed
+299147787,Alice,2021,INFO1910,Introduction to Programming (Advanced),HD,90,6,6
+299147787,Alice,2021,INFO1113,Object-Oriented Programming,HD,85,6,6
+299147787,Alice,2022,COMP2123,Data Structures and Algorithms,HD,87,6,6
+299147787,Alice,2022,COMP2022,Models of Computation,DI,75,6,6
+299147787,Alice,2022,COMP2017,Systems Programming,DC,0,0,0
+299147787,Alice,2023,COMP3308,Introduction to Artificial Intelligence,HD,93,6,6
+299595323,Bob,2021,INFO1110,Introduction to Programming,FA,45,6,0
+299595323,Bob,2021,INFO1110,Introduction to Programming,PS,50,6,6
+299595323,Bob,2021,INFO1113,Object-Oriented Programming,AF,13,6,0
+299595323,Bob,2021,INFO1111,Computing 1A Professionalism,PS,60,6,6
+299595323,Bob,2022,INFO1113,Object-Oriented Programming,PS,55,6,6
+597145286,Charlie,2016,INFO1103,Introduction to Programming ,PS,60,6,6
+597145286,Charlie,2017,INFO1105,Data Structures ,PS,50,6,6
+599259518,Daniel,2021,INFO1110,Introduction to Programming,DI,78,6,6
+599259518,Daniel,2021,INFO1111,Computing 1A Professionalism,DI,75,6,6
+599259518,Daniel,2021,INFO1113,Object-Oriented Programming,AF,19,6,0
+599259518,Daniel,2022,INFO1113,Object-Oriented Programming,PS,56,6,6
+599259518,Daniel,2022,ISYS2120,Data and Information Management,PS,63,6,6
+312407899,Eden,2020,INFO1110,Introduction to Programming,CR,75,6,6
+312407899,Eden,2020,INFO1113,Object-Oriented Programming,DI,80,6,6
+312407899,Eden,2021,COMP2123,Data Structures and Algorithms,HD,86,6,6
+312407899,Eden,2021,COMP2017,Systems Programming,HD,87,6,6
+519215588,Fayer,2022,INFO5990,Professional Practice in IT,CR,70,6,6
+519215588,Fayer,2022,COMP5424,Information Technology in Biomedicine,HD,88,6,6
+519215588,Fayer,2022,COMP5318,Machine Learning and Data Mining,CR,72,6,6
+519215588,Fayer,2022,COMP5046,Natural Language Processing,DI,82,6,6
+519217106,Gary,2021,INFO1113,Object-Oriented Programming,FA,35,6,0
+511925757,Howards,2021,INFO1110,Introduction to Programming,PS,50,6,6
+511925757,Howards,2021,INFO1113,Object-Oriented Programming,FA,0,6,0
